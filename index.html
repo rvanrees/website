@@ -4,34 +4,67 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Rutger van Rees</title>
+    <title>Rutger van Rees — IT Manager bij Interlogic | Logistiek & IT</title>
     <meta
       name="description"
-      content="Rutger van Rees, IT Manager bij Interlogic in Coevorden. Werkt op het snijvlak van logistiek en technologie: systeemkoppelingen, data en analyses. Voorheen software engineer bij digital agency Doop."
+      content="IT Manager bij Interlogic in Coevorden. Ik werk op het snijvlak van logistiek en IT: van TMS en boordcomputers tot integraties, dashboards en analyses."
     />
     <meta name="author" content="Rutger van Rees" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0457cb" />
     <link rel="canonical" href="https://vanrees.nl/" />
 
-    <!-- Open Graph (voor delen via o.a. LinkedIn en WhatsApp) -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://vanrees.nl/" />
     <meta property="og:site_name" content="Rutger van Rees" />
     <meta property="og:locale" content="nl_NL" />
-    <meta property="og:title" content="Rutger van Rees" />
+    <meta
+      property="og:title"
+      content="Rutger van Rees — IT Manager bij Interlogic"
+    />
     <meta
       property="og:description"
-      content="IT Manager bij Interlogic in Coevorden. Op het snijvlak van logistiek en technologie: systeemkoppelingen, data en analyses. Voorheen software engineer bij digital agency Doop."
+      content="IT Manager bij Interlogic in Coevorden. Ik werk op het snijvlak van logistiek en IT: van TMS en boordcomputers tot integraties, dashboards en analyses."
     />
+    <meta property="profile:first_name" content="Rutger" />
+    <meta property="profile:last_name" content="van Rees" />
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Rutger van Rees" />
-    <meta
-      name="twitter:description"
-      content="IT Manager bij Interlogic in Coevorden. Op het snijvlak van logistiek en technologie: systeemkoppelingen, data en analyses."
-    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rutger van Rees",
+        "url": "https://vanrees.nl/",
+        "jobTitle": "IT Manager",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Interlogic",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Coevorden",
+            "addressCountry": "NL"
+          }
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Saxion"
+        },
+        "knowsAbout": [
+          "Logistiek",
+          "IT-management",
+          "TMS",
+          "Systeemintegraties",
+          "Data-analyse",
+          "Softwareontwikkeling"
+        ],
+        "sameAs": [
+          "https://linkedin.com/in/rutgervanrees",
+          "https://github.com/rvanrees",
+          "https://wsocial.eu/profile/rutger.wsocial.eu"
+        ]
+      }
+    </script>
 
-    <!-- Figtree Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +72,6 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
@@ -48,6 +80,63 @@
         --color-primary: #0457cb;
         --color-secondary: #016fde;
         --font-sans: "Figtree", sans-serif;
+
+        --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        --animate-fade-in: fade-in 1s ease-out both;
+
+        @keyframes fade-up {
+          from {
+            opacity: 0;
+            transform: translateY(1.25rem);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+
+      .stagger-1 {
+        animation-delay: 0.05s;
+      }
+      .stagger-2 {
+        animation-delay: 0.15s;
+      }
+      .stagger-3 {
+        animation-delay: 0.25s;
+      }
+      .stagger-4 {
+        animation-delay: 0.35s;
+      }
+      .stagger-5 {
+        animation-delay: 0.45s;
+      }
+      .stagger-6 {
+        animation-delay: 0.55s;
+      }
+      .stagger-7 {
+        animation-delay: 0.65s;
+      }
+      .stagger-8 {
+        animation-delay: 0.75s;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-delay: 0s !important;
+          transition-duration: 0.01ms !important;
+        }
       }
     </style>
   </head>
@@ -56,82 +145,102 @@
     <div
       class="flex flex-col lg:flex-row justify-between mx-auto max-w-7xl lg:gap-x-16 px-6 lg:px-8 py-4"
     >
-      <div class="mx-auto lg:py-48 max-w-xl">
-        <p class="text-base/7 font-semibold text-primary">
+      <header class="mx-auto lg:py-48 max-w-xl">
+        <p
+          class="text-base/7 font-semibold text-primary animate-fade-up stagger-1"
+        >
           Hallo, mijn naam is
         </p>
         <h1
-          class="text-5xl font-semibold tracking-tight text-pretty sm:text-7xl -ml-1"
+          class="text-5xl font-semibold tracking-tight text-pretty sm:text-7xl -ml-1 animate-fade-up stagger-2"
         >
           Rutger van Rees
         </h1>
-        <p class="lg:mt-8 mt-4 text-normal/6 text-dark">
+        <p class="lg:mt-8 mt-4 text-base/7 text-dark animate-fade-up stagger-3">
           IT Manager bij Interlogic in Coevorden. Ik werk op het snijvlak van
           logistiek en IT en zorg dat systemen goed samenwerken en data
           bruikbaar wordt. Van TMS en boordcomputers tot integraties, dashboards
           en analyses.
         </p>
-        <p class="lg:mt-8 mt-4 text-normal/6 text-dark">
+        <p class="lg:mt-8 mt-4 text-base/7 text-dark animate-fade-up stagger-4">
           Hiervoor werkte ik jarenlang als software engineer en ontwikkelde ik
           websites, platforms en apps voor uiteenlopende organisaties. Die
           technische achtergrond neem ik dagelijks mee in mijn werk.
         </p>
         <div class="flex items-center justify-between">
-          <div class="mt-4 lg:mt-8 flex items-center gap-x-4">
+          <nav
+            aria-label="Sociale links"
+            class="mt-4 lg:mt-8 flex items-center gap-x-4 animate-fade-up stagger-5"
+          >
             <a
               href="https://linkedin.com/in/rutgervanrees"
               target="_blank"
-              class="rounded-lg bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blauw transition-colors"
+              rel="noopener noreferrer"
+              class="rounded-lg bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-secondary hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200"
               >LinkedIn</a
             >
             <a
               href="https://github.com/rvanrees"
               target="_blank"
-              class="rounded-lg bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-dark shadow-xs hover:bg-gray-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blauw transition-colors"
+              rel="noopener noreferrer"
+              class="rounded-lg bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-dark shadow-xs hover:bg-gray-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200"
               >GitHub</a
             >
             <a
               href="https://wsocial.eu/profile/rutger.wsocial.eu"
               target="_blank"
-              class="text-sm/6 font-semibold hover:text-primary transition-colors"
+              rel="noopener noreferrer"
+              class="text-sm/6 font-semibold hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-200"
               >@rutger</a
             >
-          </div>
+          </nav>
         </div>
-        <div class="flex w-full mx-auto my-16 items-center gap-x-8">
+        <div
+          class="flex w-full mx-auto my-16 items-center gap-x-8 animate-fade-in stagger-7"
+          aria-label="Eerdere opdrachtgevers"
+        >
           <img
             src="./assets/google.png"
             alt="Google"
-            class="max-h-12 flex-1 min-w-0 object-contain object-left opacity-10"
+            loading="lazy"
+            class="max-h-12 flex-1 min-w-0 object-contain object-left opacity-10 grayscale hover:opacity-40 hover:grayscale-0 transition-all duration-300"
           />
           <img
             src="./assets/avro.png"
-            alt="AVRO TROS"
-            class="max-h-12 flex-1 min-w-0 object-contain object-center opacity-10"
+            alt="AVROTROS"
+            loading="lazy"
+            class="max-h-12 flex-1 min-w-0 object-contain object-center opacity-10 grayscale hover:opacity-40 hover:grayscale-0 transition-all duration-300"
           />
           <img
             src="./assets/talpa.png"
             alt="Talpa"
-            class="max-h-12 flex-1 min-w-0 object-contain object-right opacity-10"
+            loading="lazy"
+            class="max-h-12 flex-1 min-w-0 object-contain object-right opacity-10 grayscale hover:opacity-40 hover:grayscale-0 transition-all duration-300"
           />
         </div>
-      </div>
-      <div class="mx-auto lg:py-48 lg:max-w-lg">
+      </header>
+
+      <main class="mx-auto lg:py-48 lg:max-w-lg">
+        <h2 class="sr-only">Werkervaring en opleiding</h2>
         <div class="flex flex-col gap-y-8 pb-8">
-          <article class="flex max-w-xl flex-col items-start justify-between">
+          <article
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-4"
+          >
             <div class="flex items-center gap-x-4 text-xs">
-              <p class="text-dark">2022 - Heden</p>
+              <time class="text-dark">2022 – heden</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
               >
                 Interlogic
               </p>
             </div>
-            <div class="group relative">
-              <h2 class="mt-3 text-lg/6 font-semibold text-darker">
+            <div class="relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
                 IT Manager
-              </h2>
-              <figure class="mt-4 border-l-2 border-primary pl-4">
+              </h3>
+              <figure
+                class="mt-4 border-l-2 border-primary/40 pl-4 group-hover:border-primary transition-colors duration-300"
+              >
                 <p class="text-sm/6 text-dark">
                   Verantwoordelijk voor IT en kwaliteit bij een familiegedreven
                   logistiek dienstverlener. Ik bouw en beheer de koppelingen
@@ -142,20 +251,25 @@
               </figure>
             </div>
           </article>
-          <article class="flex max-w-xl flex-col items-start justify-between">
+
+          <article
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-5"
+          >
             <div class="flex items-center gap-x-4 text-xs">
-              <p class="text-dark">2016 - 2022</p>
+              <time class="text-dark">2016 – 2022</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
               >
                 Doop
               </p>
             </div>
-            <div class="group relative">
-              <h2 class="mt-3 text-lg/6 font-semibold text-darker">
+            <div class="relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
                 Software Engineer
-              </h2>
-              <figure class="mt-4 border-l-2 border-primary pl-4">
+              </h3>
+              <figure
+                class="mt-4 border-l-2 border-primary/40 pl-4 group-hover:border-primary transition-colors duration-300"
+              >
                 <p class="text-sm/6 text-dark">
                   Ontwikkelde websites, platforms en apps bij een fullservice
                   digital agency. In multidisciplinaire teams van designers,
@@ -165,20 +279,25 @@
               </figure>
             </div>
           </article>
-          <article class="flex max-w-xl flex-col items-start justify-between">
+
+          <article
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-6"
+          >
             <div class="flex items-center gap-x-4 text-xs">
-              <p class="text-dark">2013 - 2018</p>
+              <time class="text-dark">2013 – 2018</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark"
+                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
               >
                 Saxion
               </p>
             </div>
-            <div class="group relative">
-              <h2 class="mt-3 text-lg/6 font-semibold text-darker">
+            <div class="relative">
+              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
                 Informatica
-              </h2>
-              <figure class="mt-4 border-l-2 border-primary pl-4">
+              </h3>
+              <figure
+                class="mt-4 border-l-2 border-primary/40 pl-4 group-hover:border-primary transition-colors duration-300"
+              >
                 <p class="text-sm/6 text-dark">
                   Hbo-opleiding Informatica met de focus op
                   softwareontwikkeling. Een brede technische basis in
@@ -190,7 +309,7 @@
             </div>
           </article>
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>
