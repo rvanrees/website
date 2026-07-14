@@ -10,8 +10,17 @@
       content="IT Manager bij Interlogic in Coevorden. Ik werk op het snijvlak van logistiek en IT: van TMS en boordcomputers tot integraties, dashboards en analyses."
     />
     <meta name="author" content="Rutger van Rees" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#0457cb" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="theme-color"
+      content="#0457cb"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#181818"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="canonical" href="https://vanrees.nl/" />
 
     <meta property="og:type" content="profile" />
@@ -75,12 +84,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-darker: #0a1317;
-        --color-dark: #5d6c7b;
-        --color-primary: #0457cb;
-        --color-secondary: #016fde;
+        --color-asphalt: #0a1317;
+        --color-concrete: #5d6c7b;
+        --color-sea: #0457cb;
+        --color-sky: #016fde;
+        --color-night: #181818;
+        --color-chalk: #f7f7f7;
+        --color-carrot: #ff5722;
+        --color-peach: #e36944;
         --font-sans: "Figtree", sans-serif;
-
         --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
         --animate-fade-in: fade-in 1s ease-out both;
 
@@ -141,13 +153,15 @@
     </style>
   </head>
 
-  <body class="bg-white text-darker">
+  <body
+    class="bg-white text-asphalt dark:bg-night dark:text-white transition-colors"
+  >
     <div
       class="flex min-h-screen flex-col lg:flex-row lg:items-center justify-between mx-auto max-w-7xl lg:gap-x-16 px-6 lg:px-8 py-4"
     >
       <header class="mx-auto max-w-xl">
         <p
-          class="text-base/7 font-semibold text-primary animate-fade-up stagger-1"
+          class="text-base/7 font-semibold text-sea dark:text-carrot animate-fade-up stagger-1"
         >
           Hallo, mijn naam is
         </p>
@@ -156,13 +170,17 @@
         >
           Rutger van Rees
         </h1>
-        <p class="lg:mt-8 mt-4 text-base/7 text-dark animate-fade-up stagger-3">
+        <p
+          class="lg:mt-8 mt-4 text-base/7 text-concrete dark:text-chalk/75 animate-fade-up stagger-3"
+        >
           IT Manager bij Interlogic in Coevorden. Ik werk op het snijvlak van
           logistiek en IT en zorg dat systemen goed samenwerken en data
           bruikbaar wordt. Van TMS en boordcomputers tot integraties, dashboards
           en analyses.
         </p>
-        <p class="lg:mt-8 mt-4 text-base/7 text-dark animate-fade-up stagger-4">
+        <p
+          class="lg:mt-8 mt-4 text-base/7 text-concrete dark:text-chalk/75 animate-fade-up stagger-4"
+        >
           Hiervoor werkte ik jarenlang als software engineer en ontwikkelde ik
           websites, platforms en apps voor uiteenlopende organisaties. Die
           technische achtergrond neem ik dagelijks mee in mijn werk.
@@ -176,21 +194,21 @@
               href="https://linkedin.com/in/rutgervanrees"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-lg bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200"
+              class="rounded-lg bg-sea dark:bg-carrot px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-sky dark:hover:bg-peach focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea dark:focus-visible:outline-carrot transition-all duration-200"
               >LinkedIn</a
             >
             <a
               href="https://github.com/rvanrees"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-lg bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-dark shadow-xs hover:bg-gray-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200"
+              class="rounded-lg bg-gray-100 dark:bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-concrete dark:text-chalk shadow-xs hover:bg-gray-200 dark:hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea dark:focus-visible:outline-carrot transition-all duration-200"
               >GitHub</a
             >
             <a
               href="https://wsocial.eu/profile/rutger.wsocial.eu"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm/6 font-semibold hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors duration-200"
+              class="text-sm/6 font-semibold hover:text-sea dark:hover:text-carrot focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea dark:focus-visible:outline-carrot transition-colors duration-200"
               >@rutger</a
             >
           </nav>
@@ -203,19 +221,19 @@
             src="./assets/google.png"
             alt="Google"
             loading="lazy"
-            class="max-h-12 flex-1 min-w-0 object-contain object-left opacity-10 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            class="max-h-12 flex-1 min-w-0 object-contain object-left opacity-10 grayscale dark:invert dark:opacity-30 hover:opacity-100 dark:invert dark:hover:opacity-100 transition-all duration-300"
           />
           <img
             src="./assets/avro.png"
             alt="AVROTROS"
             loading="lazy"
-            class="max-h-12 flex-1 min-w-0 object-contain object-center opacity-10 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            class="max-h-12 flex-1 min-w-0 object-contain object-center opacity-10 grayscale dark:invert dark:opacity-30 hover:opacity-100 dark:invert dark:hover:opacity-100 transition-all duration-300"
           />
           <img
             src="./assets/talpa.png"
             alt="Talpa"
             loading="lazy"
-            class="max-h-12 flex-1 min-w-0 object-contain object-right opacity-10 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            class="max-h-12 flex-1 min-w-0 object-contain object-right opacity-10 grayscale dark:invert dark:opacity-30 hover:opacity-100 dark:invert dark:hover:opacity-100 transition-all duration-300"
           />
         </div>
       </header>
@@ -224,24 +242,26 @@
         <h2 class="sr-only">Werkervaring en opleiding</h2>
         <div class="flex flex-col gap-y-8 pb-8">
           <article
-            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-4"
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300 animate-fade-up stagger-4"
           >
             <div class="flex items-center gap-x-4 text-xs">
-              <time class="text-dark">2022 – heden</time>
+              <time class="text-concrete dark:text-chalk/60">2022 – heden</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
+                class="relative z-10 rounded-full bg-gray-50 dark:bg-white/10 px-3 py-1.5 font-medium text-concrete dark:text-chalk group-hover:bg-white dark:group-hover:bg-white/15 group-hover:text-sea dark:group-hover:text-carrot transition-colors duration-300"
               >
                 Interlogic
               </p>
             </div>
             <div class="relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-asphalt dark:text-white"
+              >
                 IT Manager
               </h3>
               <figure
-                class="mt-4 border-l-2 border-primary pl-4 transition-colors duration-300"
+                class="mt-4 border-l-2 border-sea dark:border-carrot pl-4 transition-colors duration-300"
               >
-                <p class="text-sm/6 text-dark">
+                <p class="text-sm/6 text-concrete dark:text-chalk/75">
                   Verantwoordelijk voor IT en kwaliteit bij een familiegedreven
                   logistiek dienstverlener. Ik bouw en beheer de koppelingen
                   tussen klanten, TMS en boordcomputers, en vertaal ritdata naar
@@ -253,24 +273,26 @@
           </article>
 
           <article
-            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-5"
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300 animate-fade-up stagger-5"
           >
             <div class="flex items-center gap-x-4 text-xs">
-              <time class="text-dark">2016 – 2022</time>
+              <time class="text-concrete dark:text-chalk/60">2016 – 2022</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
+                class="relative z-10 rounded-full bg-gray-50 dark:bg-white/10 px-3 py-1.5 font-medium text-concrete dark:text-chalk group-hover:bg-white dark:group-hover:bg-white/15 group-hover:text-sea dark:group-hover:text-carrot transition-colors duration-300"
               >
                 Doop
               </p>
             </div>
             <div class="relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-asphalt dark:text-white"
+              >
                 Software Engineer
               </h3>
               <figure
-                class="mt-4 border-l-2 border-primary pl-4 transition-colors duration-300"
+                class="mt-4 border-l-2 border-sea dark:border-carrot pl-4 transition-colors duration-300"
               >
-                <p class="text-sm/6 text-dark">
+                <p class="text-sm/6 text-concrete dark:text-chalk/75">
                   Ontwikkelde websites, platforms en apps bij een fullservice
                   digital agency. In multidisciplinaire teams van designers,
                   strategen en developers bouwde ik digitale oplossingen voor
@@ -281,24 +303,26 @@
           </article>
 
           <article
-            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 transition-colors duration-300 animate-fade-up stagger-6"
+            class="group flex max-w-xl flex-col items-start justify-between rounded-xl -m-4 p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300 animate-fade-up stagger-6"
           >
             <div class="flex items-center gap-x-4 text-xs">
-              <time class="text-dark">2013 – 2018</time>
+              <time class="text-concrete dark:text-chalk/60">2013 – 2018</time>
               <p
-                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-dark group-hover:bg-white group-hover:text-primary transition-colors duration-300"
+                class="relative z-10 rounded-full bg-gray-50 dark:bg-white/10 px-3 py-1.5 font-medium text-concrete dark:text-chalk group-hover:bg-white dark:group-hover:bg-white/15 group-hover:text-sea dark:group-hover:text-carrot transition-colors duration-300"
               >
                 Saxion
               </p>
             </div>
             <div class="relative">
-              <h3 class="mt-3 text-lg/6 font-semibold text-darker">
+              <h3
+                class="mt-3 text-lg/6 font-semibold text-asphalt dark:text-white"
+              >
                 Informatica
               </h3>
               <figure
-                class="mt-4 border-l-2 border-primary pl-4 transition-colors duration-300"
+                class="mt-4 border-l-2 border-sea dark:border-carrot pl-4 transition-colors duration-300"
               >
-                <p class="text-sm/6 text-dark">
+                <p class="text-sm/6 text-concrete dark:text-chalk/75">
                   Hbo-opleiding Informatica met de focus op
                   softwareontwikkeling. Een brede technische basis in
                   programmeren, databases en systeemontwerp, afgerond met een
